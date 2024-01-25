@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sports Store Promotions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .promotion-card {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                background-color: #fff;
+            }
+
+            .promotion-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .promotion-details {
+                padding: 20px;
+            }
+
+            .promotion-title {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .promotion-description {
+                margin-bottom: 10px;
+            }
+
+            .promotion-buttons {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .promotion-buttons button.active {
+                background-color: #555;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                background-color: #333;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-right: 10px;
+                display: inline-block;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Sports Store Promotions</h1>
+        </header>
+        <main>
+            <div class="promotion-buttons">
+                <button class="btn" onclick="filterPromotions('all')">All Promotions</button>
+                <button class="btn" onclick="filterPromotions('new')">New Customers</button>
+            </div>
+            <div id="promotions-container"></div>
+
+            <script>
+                let allPromotions = [];
+
+                async function fetchPromotions() {
+                    try {
+                        const response = await fetch('data.json');
+                        const data = await response.json();
+                        return data;
+                    } catch (error) {
+                        console.error('Error fetching promotions:', error);
+                    }
+                }
+
+                function renderPromotions(promotions) {
+                    const container = document.getElementById('promotions-container');
+                    container.innerHTML = ''; // Reset sadrzaja
+
+                    // Sadrzaj
+                    promotions.forEach(promotion => {
+                        const promotionCard = document.createElement('div');
+                        promotionCard.className = 'promotion-card';
+
+                        const promotionImage = document.createElement('img');
+                        promotionImage.src = promotion.heroImageUrl;
+                        promotionImage.alt = promotion.name;
+                        promotionImage.className = 'promotion-image';
+
+                        const promotionDetails = document.createElement('div');
+                        promotionDetails.className = 'promotion-details';
+
+                        const promotionTitle = document.createElement('div');
+                        promotionTitle.className = 'promotion-title';
+                        promotionTitle.textContent = promotion.name;
+
+                        const promotionDescription = document.createElement('div');
+                        promotionDescription.className = 'promotion-description';
+                        promotionDescription.textContent = promotion.description;
+
+                        const promotionButtons = document.createElement('div');
+                        promotionButtons.className = 'promotion-buttons';
+
+                        const termsButton = createButton(promotion.termsAndConditionsButtonText);
+                        const joinButton = createButton(promotion.joinNowButtonText);
+
+                        promotionButtons.appendChild(termsButton);
+                        promotionButtons.appendChild(joinButton);
+
+                        promotionDetails.appendChild(promotionTitle);
+                        promotionDetails.appendChild(promotionDescription);
+                        promotionDetails.appendChild(promotionButtons);
+
+                        promotionCard.appendChild(promotionImage);
+                        promotionCard.appendChild(promotionDetails);
+
+                        container.appendChild(promotionCard);
+                    });
+                }
+
+                function createButton(text) {
+                    const button = document.createElement('a');
+                    button.href = '#';
+                    button.className = 'btn';
+                    button.textContent = text;
+                    return button;
+                }
+
+                async function init() {
+                    allPromotions = await fetchPromotions();
+
+                    // Sortiranje promocija
+                    allPromotions.sort((a, b) => a.sequence - b.sequence);
+
+                    // Prikaz svih promocija
+                    renderPromotions(allPromotions);
+                }
+
+                // Filtriranje za new customers
+                function filterPromotions(type) {
+                    const filteredPromotions = (type === 'new')
+                        ? allPromotions.filter(promo => promo.onlyNewCustomers)
+                        : allPromotions;
+
+                    // Sortiranje za filtrirane promocije
+                    filteredPromotions.sort((a, b) => a.sequence - b.sequence);
+
+                    // Prikaz filtriranih promocija
+                    renderPromotions(filteredPromotions);
+                }
+
+                // Inicijalizacija
+                init();
+            </script>
+        </main>
+    </body>
+</html>
