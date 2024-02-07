@@ -1,0 +1,286 @@
+@media screen and (max-width: 600px) {
+
+     header {
+          width: 100%;
+          padding: 5px;
+          font-size: 10px;
+     }
+
+     #promotions-container{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex start;
+     }
+
+     main {
+          padding: 0px;
+          padding-top: 15px;
+     }
+
+     .promotion-card {
+          width: 300px;
+          margin: 15px;
+     }
+
+     .promotion-image {
+          width: 100%;
+          height: auto;
+     }    
+
+     .promotion-details {
+          padding: 20px;
+     }
+     
+     .promotion-title {
+          font-size: 20px;
+          margin-bottom: 10px;
+     }
+     
+     .promotion-description {
+          margin-bottom: 10px;
+          font-size: 12px;
+     }
+     
+     .promotion-buttons {
+          margin-bottom: 15px;
+     } 
+     
+     .btn {
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin-right: 10px;
+          font-size: 12px;
+     }
+}
+
+@media screen and (min-width: 601px) {
+     header {
+          width: 100%;
+          padding: 6px;
+          font-size: 12px;
+     }
+
+     #promotions-container{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex start;
+     }
+
+     main {
+          padding: 0px;
+          padding-top: 15px;
+     }
+
+     .promotion-card {
+          width: 260px;
+          margin: 15px;
+     }
+
+     .promotion-image {
+          width: 100%;
+          height: auto;
+     }    
+
+     .promotion-details {
+          padding: 20px;
+     }
+     
+     .promotion-title {
+          font-size: 20px;
+          margin-bottom: 10px;
+     }
+     
+     .promotion-description {
+          margin-bottom: 10px;
+          font-size: 12px;
+     }
+     
+     .promotion-buttons {
+          margin-bottom: 15px;
+     } 
+     
+     .btn {
+          padding: 8px 16px;
+          border-radius: 5px;
+          margin-right: 10px;
+          font-size: 14px;
+     }
+
+     .terms-btn {
+          font-size: 13px;
+          padding: 5px 5px;
+     }
+     
+     .join-btn {
+          font-size: 13px;
+          padding: 5px 5px;
+     }
+}
+
+@media screen and (min-width: 768px) {
+     header {
+          width: 100%;
+          padding: 7px;
+          font-size: 14px;
+     }
+
+     #promotions-container{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex start;
+     }
+
+     main {
+          padding: 0px;
+          padding-top: 20px;
+     }
+
+     .promotion-card {
+          width: 300px;
+          margin: 20px;
+     }
+
+     .promotion-image {
+          width: 100%;
+          height: auto;
+     }    
+
+     .promotion-details {
+          padding: 20px;
+     }
+     
+     .promotion-title {
+          font-size: 20px;
+          margin-bottom: 10px;
+     }
+     
+     .promotion-description {
+          margin-bottom: 10px;
+          font-size: 12px;
+     }
+     
+     .promotion-buttons {
+          margin-bottom: 20px;
+     } 
+     
+     .btn {
+          padding: 8px 16px;
+          border-radius: 5px;
+          margin-right: 10px;
+          font-size: 13px;
+     }
+}
+
+@media screen and (min-width: 992px) {
+     
+     header {
+          width: 100%;
+          padding: 9px;
+          font-size: 16px;
+     }
+
+     #promotions-container{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex start;
+     }
+
+     main {
+          padding: 20px;
+     }
+
+     .promotion-card {
+          width: 335px;
+          margin: 20px;
+     }
+
+     .promotion-image {
+          width: 100%;
+          height: auto;
+     }    
+
+     .promotion-details {
+          padding: 20px;
+     }
+     
+     .promotion-title {
+          font-size: 24px;
+          margin-bottom: 10px;
+     }
+     
+     .promotion-description {
+          margin-bottom: 10px;
+          font-size: 14px;
+     }
+     
+     .promotion-buttons {
+          margin-bottom: 20px;
+     } 
+     
+     .btn {
+          padding: 8px 16px;
+          border-radius: 5px;
+          margin-right: 10px;
+          font-size: 15px;
+     }
+     
+}
+
+@media screen and (min-width: 1200px) {
+
+     header {
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+     }
+
+     #promotions-container{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex start;
+     }
+
+     main {
+          padding: 20px;
+     }
+
+     .promotion-card {
+          width: 350px;
+          margin: 20px;
+     }
+     
+     .promotion-image {
+          width: 100%;
+          height: auto;
+     }    
+
+     .promotion-details {
+          padding: 20px;
+     }
+     
+     .promotion-title {
+          font-size: 24px;
+          margin-bottom: 10px;
+     }
+     
+     .promotion-description {
+          margin-bottom: 10px;
+          font-size: 14px;
+     }
+     
+     .promotion-buttons {
+          margin-bottom: 20px;
+     } 
+     
+     .btn {
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin-right: 10px;
+          font-size: 16px;
+     }
+}

@@ -1,0 +1,98 @@
+body {
+     font-family: 'Arial', sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+}
+
+header {
+     width: 1000px;
+     margin: 0 auto;
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+     font-size: 16px;
+}
+
+.wrapper {
+     width: 1000px;
+     margin: 0 auto;
+}
+
+#promotions-container{
+     width: 1000px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     overflow:hidden;
+}
+
+main {
+     padding: 20px;
+}
+
+
+.promotion-card {
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     margin-bottom: 20px;
+     overflow: hidden;
+     background-color: #fff;
+     margin: 20px;
+}
+
+.promotion-image {
+     width: 600px;
+     height: auto;
+}
+
+.promotion-details {
+     padding: 20px;
+}
+
+.promotion-title {
+     font-size: 24px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+.promotion-description {
+     margin-bottom: 10px;
+     text-align: left;
+     font-size: 14px;
+}
+
+.promotion-buttons {
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+
+.btn {
+     padding: 10px 20px;
+     background-color: #fff;
+     color: black;
+     text-decoration: none;
+     border-radius: 5px;
+     margin-right: 10px;
+     display: inline-block;
+     cursor: pointer;
+     font-size: 16px;
+}
+
+.active {
+     background-color: #555;
+     color: #fff;
+} 
+
+.terms-btn {
+     background-color: #fff;
+     border: 2px solid #000;
+}
+
+.join-btn {
+     background-color: #000;
+     color: #fff;
+}
