@@ -15,17 +15,12 @@ header {
      font-size: 16px;
 }
 
-.wrapper {
-     width: 1000px;
-     margin: 0 auto;
-}
 
 #promotions-container{
      width: 1000px;
      display: flex;
      flex-wrap: wrap;
-     justify-content: space-around;
-     overflow:hidden;
+     justify-content: flex-start;
 }
 
 main {
@@ -67,8 +62,9 @@ main {
 .promotion-buttons {
      text-align: center;
      margin-bottom: 20px;
+     margin-right: 0;
+     margin-left: 0;
 }
-
 
 .btn {
      padding: 10px 20px;

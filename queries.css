@@ -8,9 +8,6 @@
 
      #promotions-container{
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex start;
      }
 
      main {
@@ -19,8 +16,10 @@
      }
 
      .promotion-card {
-          width: 300px;
-          margin: 15px;
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+          margin-bottom: 20px;
      }
 
      .promotion-image {
@@ -48,10 +47,20 @@
      
      .btn {
           padding: 10px 20px;
-          border-radius: 5px;
-          margin-right: 10px;
+          border-radius: 4px;
+          margin-right: -1.5%;
           font-size: 12px;
      }
+
+     .terms-btn {
+          border-radius: 5px;
+          margin-right: 10px;
+     }
+     
+     .join-btn {
+          border-radius: 5px;
+          margin-right: 10px;
+     }   
 }
 
 @media screen and (min-width: 601px) {
@@ -63,9 +72,6 @@
 
      #promotions-container{
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex start;
      }
 
      main {
@@ -74,8 +80,10 @@
      }
 
      .promotion-card {
-          width: 260px;
-          margin: 15px;
+          width: 100%;
+          max-width: 260px;
+          margin: auto;
+          margin-bottom: 20px;
      }
 
      .promotion-image {
@@ -102,21 +110,25 @@
      } 
      
      .btn {
-          padding: 8px 16px;
-          border-radius: 5px;
-          margin-right: 10px;
+          padding: 8px 14px;
+          border-radius: 4px;
+          margin-right: -1%;
           font-size: 14px;
      }
 
      .terms-btn {
           font-size: 13px;
-          padding: 5px 5px;
+          padding: 10px 5px;
+          border-radius: 5px;
+          margin-right: 10px;
      }
      
      .join-btn {
           font-size: 13px;
-          padding: 5px 5px;
-     }
+          padding: 10px 5px;
+          border-radius: 5px;
+          margin-right: 10px;
+     } 
 }
 
 @media screen and (min-width: 768px) {
@@ -128,9 +140,6 @@
 
      #promotions-container{
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex start;
      }
 
      main {
@@ -139,8 +148,10 @@
      }
 
      .promotion-card {
-          width: 300px;
-          margin: 20px;
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+          margin-bottom: 20px;
      }
 
      .promotion-image {
@@ -167,11 +178,21 @@
      } 
      
      .btn {
-          padding: 8px 16px;
-          border-radius: 5px;
-          margin-right: 10px;
+          padding: 8px 14px;
+          border-radius: 4px;
+          margin-right: -1%;
           font-size: 13px;
      }
+
+     .terms-btn {
+          border-radius: 5px;
+          margin-right: 10px;
+     }
+     
+     .join-btn {
+          border-radius: 5px;
+          margin-right: 10px;
+     }   
 }
 
 @media screen and (min-width: 992px) {
@@ -184,9 +205,6 @@
 
      #promotions-container{
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex start;
      }
 
      main {
@@ -194,8 +212,10 @@
      }
 
      .promotion-card {
-          width: 335px;
-          margin: 20px;
+          width: 100%;
+          max-width: 315px;
+          margin: auto;
+          margin-bottom: 20px;
      }
 
      .promotion-image {
@@ -222,12 +242,21 @@
      } 
      
      .btn {
-          padding: 8px 16px;
-          border-radius: 5px;
-          margin-right: 10px;
+          padding: 8px 14px;
+          border-radius: 4px;
+          margin-right: -0.75%;
           font-size: 15px;
      }
+
+     .terms-btn {
+          border-radius: 5px;
+          margin-right: 10px;
+     }
      
+     .join-btn {
+          border-radius: 5px;
+          margin-right: 10px;
+     }   
 }
 
 @media screen and (min-width: 1200px) {
@@ -240,9 +269,6 @@
 
      #promotions-container{
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex start;
      }
 
      main {
@@ -250,8 +276,10 @@
      }
 
      .promotion-card {
-          width: 350px;
-          margin: 20px;
+          width: 100%;
+          max-width: 340px;
+          margin: auto;
+          margin-bottom: 20px;
      }
      
      .promotion-image {
@@ -278,9 +306,19 @@
      } 
      
      .btn {
-          padding: 10px 20px;
+          padding: 10px 15px;
+          border-radius: 4px;
+          margin-right: -0.5%;
+          font-size: 16px;
+     }
+
+     .terms-btn {
           border-radius: 5px;
           margin-right: 10px;
-          font-size: 16px;
+     }
+     
+     .join-btn {
+          border-radius: 5px;
+          margin-right: 10px;
      }
 }
