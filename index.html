@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="queries.css">
+        <!-- FOR THIS CASE QUERYIES ARE UNECESSARY -->
+        <!-- <link rel="stylesheet" href="queries.css"> -->
     </head>
 
     <body>
@@ -18,11 +19,13 @@
         
         <main>
             <div class="promotion-buttons">
-                <button class="btn active" onclick="filterPromotions('all')">All Promotions</button>
-                <button class="btn" onclick="filterPromotions('new')">New Customers</button>
+                <button class="filter_btn filter_btn_active" onclick="filterPromotions('all')">All Promotions</button>
+                <button class="filter_btn" onclick="filterPromotions('new')">New Customers</button>
             </div>
-            
-            <div id="promotions-container"></div>
+            <!-- CONTAINER WHICH WILL SET MAX WIDTH AND DYNAMIC WIDTH OF ELEMENT -->
+            <div class="container">
+                <div id="promotions-container"></div>
+            </div>
         </main>
 
           

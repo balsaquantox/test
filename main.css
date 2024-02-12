@@ -6,7 +6,7 @@ body {
 }
 
 header {
-     width: 1000px;
+     width: 100%;
      margin: 0 auto;
      background-color: #333;
      color: #fff;
@@ -15,12 +15,18 @@ header {
      font-size: 16px;
 }
 
+/* ADD WRAPPER CONTAINE */
+.container {
+     width: 100%;
+     margin: 0 auto;
+     max-width: 1200px;
+}
+
 
 #promotions-container{
-     width: 1000px;
      display: flex;
      flex-wrap: wrap;
-     justify-content: flex-start;
+     justify-content: center;
 }
 
 main {
@@ -29,6 +35,8 @@ main {
 
 
 .promotion-card {
+     width: 100%; /* RESPONSIVE SIZE OF CARD */
+     max-width: 350px; /* FIX MAX WIDTH */
      border: 1px solid #ddd;
      border-radius: 8px;
      margin-bottom: 20px;
@@ -38,7 +46,7 @@ main {
 }
 
 .promotion-image {
-     width: 600px;
+     width: 100%;
      height: auto;
 }
 
@@ -60,11 +68,50 @@ main {
 }
 
 .promotion-buttons {
+     display: flex;
+     justify-content: center;
      text-align: center;
      margin-bottom: 20px;
      margin-right: 0;
      margin-left: 0;
 }
+
+
+/* ADDED NEW CLASSES FRO FILTER BUTTONS */
+.filter_btn {
+     padding: 10px 20px;
+     background-color: #fff;
+     color: black;
+     text-decoration: none;
+     border-radius: 5px 0 0 5px;
+     display: inline-block;
+     cursor: pointer;
+     font-size: 16px;
+}
+
+/* LAST ITEM WILL HAVE SOME DIFFERENT BORDER RADIUS */
+.filter_btn:nth-last-child(1) {
+     padding: 10px 20px;
+     background-color: #fff;
+     color: black;
+     text-decoration: none;
+     border-radius: 0 5px 5px 0;
+     display: inline-block;
+     cursor: pointer;
+     font-size: 16px;
+}
+
+/* ADDED CLASS FOR ACTIVE BUTTON */
+.filter_btn_active {
+     background-color: #555;
+     color: #fff;
+} 
+
+/* LAST BUTTON WILL HAVE SOME DIFFERENT COLOR IF ACTIVE */
+.filter_btn_active:nth-last-child(1) {
+     background-color: #555;
+     color: #fff;
+} 
 
 .btn {
      padding: 10px 20px;

@@ -1,5 +1,9 @@
 let allPromotions = [];
 
+// CLASS CONSTANTS
+const ACTIVE_BUTTON_CLASS = "filter_btn_active";
+const BUTTON_CLASS = ".filter_btn"; 
+
 async function fetchPromotions() {
      try {
           const response = await fetch('data.json');
@@ -79,13 +83,16 @@ async function init() {
 
 // Filtriranje promocija
 function filterPromotions(type) {
-     var buttons = document.querySelectorAll('.btn');
+     console.log("[BUTTON_CLASS]: ", BUTTON_CLASS);
+     var buttons = document.querySelectorAll(BUTTON_CLASS);
+     console.log("[BUTTONS]: ", buttons);
      buttons.forEach(function(button) {
-          button.classList.remove('active');
+          console.log("[ACTIVE_BUTTON_CLASS]: ", ACTIVE_BUTTON_CLASS)
+          button.classList.remove(ACTIVE_BUTTON_CLASS);
      });
 
      // Dodavanje klase active kliknutom btn-u
-     event.target.classList.add('active');
+     event.target.classList.add(ACTIVE_BUTTON_CLASS);
 
      const filteredPromotions = (type === 'new')
           ? allPromotions.filter(promo => promo.onlyNewCustomers)
